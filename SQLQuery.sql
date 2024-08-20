@@ -323,3 +323,21 @@ ORDER BY store_id,inventory_turnover_ratio DESC;
 --Thank You--
 
 
+create table emp
+(eid char(5),
+name varchar(15),
+age date,
+salary int);
+
+select * from emp;
+
+alter table emp
+alter column age char(5);
+insert into emp
+values('c0001','amit kumar','45',500000),
+('c0002','lalit sharma','25',1200000),
+('c0003','pavan kumar','36',750000);
+
+
+select max(salary) from emp
+where salary not in (select max(salary) from emp);
